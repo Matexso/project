@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "dff53f82-142f-41cd-afad-081f30c6ae98",
+		"name": "Backen10",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42784410"
+	},
+	"item": [
+		{
+			"name": "ListCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/api/categories/",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"api",
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewCategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ali",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "amiri",
+							"type": "text"
+						},
+						{
+							"key": "Photo",
+							"type": "file",
+							"src": "/C:/Users/User/Downloads/Telegram Desktop/photo_2025-05-11_13-18-27.jpg"
+						},
+						{
+							"key": "price",
+							"value": "500000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{Server}}/api/categories",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/api/categories/{id}",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"api",
+						"categories",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditCategory",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"نام جدید دسته‌بندی\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Server}}/api/categories/{id}",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"api",
+						"categories",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Server}}/api/categories/{id}",
+					"host": [
+						"{{Server}}"
+					],
+					"path": [
+						"api",
+						"categories",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
